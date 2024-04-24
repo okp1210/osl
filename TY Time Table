@@ -1,0 +1,131 @@
+Design a TY Time Table using HTML, CSS/Bootstrap containing Subject Name, Faculty Initials,Time Slot and Day of the week.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      margin-top: 30px;
+    }
+    .timetable {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .timetable th, .timetable td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    .timetable th {
+      background-color: #f2f2f2;
+    }
+  </style>
+<body>
+    <div class="container">
+        <h2 class="text-center">Time-Table</h2>
+        <table class="timetable table table-bordered">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8.00-9.00</td>
+                    <td>HONORS<br>(RS)</td>
+                    <td>-<br></td>
+                    <td>-<br></td>
+                    <td>-<br></td>
+                    <td>PM<br>(JL)</td>
+                    <td>-<br></td>
+                </tr>
+                <tr>
+                    <td>9:00-10:00</td>
+                    <td>HONORS<br>(RS)</td>
+                    <td>OSL<br>(PG)</td>
+                    <td>-<br></td>
+                    <td>SDL<br>(SK)</td>
+                    <td>SDL<br>(JL)</td>
+                    <td>IVP-L<br>(DA)</td>
+                </tr>
+                <tr>
+                    <td>10:00-11:00</td>
+                    <td>-<br>(RS)</td>
+                    <td>OSL<br>(PG)</td>
+                    <td>OS<br>(PG)</td>
+                    <td>SDL<br>(SK)</td>
+                    <td>SDL<br>(JL)</td>
+                    <td>IVP-L<br>(DA)</td>
+                </tr>
+                <tr>
+                    <td>11:00-12:00</td>
+                    <td>-<br>(RS)</td>
+                    <td>PEC-3<br>(MT)</td>
+                    <td>PEC-3<br>(MT)</td>
+                    <td>TS<br>(KR)</td>
+                    <td>OS<br>(PG)</td>
+                    <td>ML-L<br>(MT)</td>
+                </tr>
+                <tr>
+                    <td>12:00-1:00</td>
+                    <td>-<br>(RS)</td>
+                    <td>PEC-4<br>(MT)</td>
+                    <td>PEC-4<br>(MT)</td>
+                    <td>TS<br>(KR)</td>
+                    <td>PEC-3<br>(MT)</td>
+                    <td>ML-L<br>(MT)</td>
+                </tr>
+                <tr>
+                    <td>1:00-2:00</td>
+                    <td>-<br></td>
+                    <td>-<br></td>
+                    <td>-<br></td>
+                    <td>-<br></td>
+                    <td>-<br></td>
+                    <td>-<br></td>
+                </tr>
+                <tr>
+                    <td>2-3:00</td>
+                    <td>-<br>(RS)</td>
+                    <td>OEC-3<br>(PM)</td>
+                    <td>OEC-3<br>(PM)</td>
+                    <td>OEC-4<br>(MB)</td>
+                    <td>OEC-4<br>(MB)</td>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td>3-4:00</td>
+                    <td>-<br>(RS)</td>
+                    <td>OSL<br>(PM)</td>
+                    <td>OEC-4<br>(MB)</td>
+                    <td>IVP<br>(DA)</td>
+                    <td>IVP<br>(DA)</td>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td>3-5:00</td>
+                    <td>-<br></td>
+                    <td>OSL<br>(PM)</td>
+                    <td>-<br></td>
+                    <td>-<br></td>
+                    <td>-<br></td>
+                    <td><br></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
