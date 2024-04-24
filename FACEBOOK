@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+    }
+    .logo {
+      margin-right: 20px;
+    }
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+    .form-container {
+      flex: 1;
+    }
+    h2 {
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1877f2;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #166fe5;
+    }
+    .error-message {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+    </div>
+    <div class="form-container">
+      <h2>Facebook Registration</h2>
+      <form id="registrationForm" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required>
+          <div id="firstNameError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required>
+          <div id="lastNameError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <div id="emailError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" minlength="8" required>
+          <div id="passwordError" class="error-message"></div>
+        </div>
+        <input type="submit" value="Sign Up">
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function validateForm() {
+      var firstName = document.getElementById('firstName').value.trim();
+      var lastName = document.getElementById('lastName').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var password = document.getElementById('password').value.trim();
+      var valid = true;
+
+      // First Name validation
+      if (firstName === '') {
+        document.getElementById('firstNameError').innerText = 'First name is required';
+        valid = false;
+      } else {
+        document.getElementById('firstNameError').innerText = '';
+      }
+
+      // Last Name validation
+      if (lastName === '') {
+        document.getElementById('lastNameError').innerText = 'Last name is required';
+        valid = false;
+      } else {
+        document.getElementById('lastNameError').innerText = '';
+      }
+
+      // Email validation
+      if (email === '') {
+        document.getElementById('emailError').innerText = 'Email is required';
+        valid = false;
+      } else if (!validateEmail(email)) {
+        document.getElementById('emailError').innerText = 'Invalid email format';
+        valid = false;
+      } else {
+        document.getElementById('emailError').innerText = '';
+      }
+
+      // Password validation
+      if (password === '') {
+        document.getElementById('passwordError').innerText = 'Password is required';
+        valid = false;
+      } else if (password.length < 8) {
+        document.getElementById('passwordError').innerText = 'Password must be at least 8 characters long';
+        valid = false;
+      } else {
+        document.getElementById('passwordError').innerText = '';
+      }
+
+      return valid;
+    }
+
+    function validateEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+  </script>
+</body>
+</html>
