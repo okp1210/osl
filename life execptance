@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Example</title>
+</head>
+<body>
+  <h1>Hello, JavaScript!</h1>
+
+  <script>
+    // 1. Put an alert
+    alert("Hello! This is an alert!");
+
+    // 2. Calculate average number of weeks in human lifetime
+    // Constants
+    const averageHumanLifespanYears = 79; // Average human lifespan in years
+    const weeksInYear = 52; // Number of weeks in a year
+
+    // Calculate average number of weeks in human lifetime
+    const averageWeeksInLifetime = averageHumanLifespanYears * weeksInYear;
+
+    console.log("Average number of weeks in human lifetime:", averageWeeksInLifetime);
+
+    // 3. Create variables to store a string and concatenate them
+    let greeting = "Hello,";
+    let name = "John";
+
+    // Concatenate strings
+    let message = greeting + " " + name;
+
+    console.log(message); // Output: Hello, John
+
+    // 4. Program that tells time of the day (morning, afternoon, night)
+    // Get current hour
+    const currentHour = new Date().getHours();
+
+    // Determine time of the day
+    let timeOfDay;
+    if (currentHour >= 5 && currentHour < 12) {
+      timeOfDay = "morning";
+    } else if (currentHour >= 12 && currentHour < 18) {
+      timeOfDay = "afternoon";
+    } else {
+      timeOfDay = "night";
+    }
+
+    console.log("It's", timeOfDay);
+  </script>
+</body>
+</html>
